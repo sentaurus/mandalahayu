@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="380" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4677af97-e839-45c2-92a6-4cfd61537cc0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="6"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idAdm" class="java.lang.String"/>
+	<parameter name="tgl" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$F{tanggal}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT murid.*,pembayaran.* FROM murid INNER JOIN administrasi ON murid.id_mrd = administrasi.id_mrd INNER JOIN pembayaran ON administrasi.id_adm = pembayaran.id_adm WHERE pembayaran.id_adm = $P{idAdm} AND pembayaran.tanggal = $P{tgl};]]>
+	</queryString>
+	<field name="id_mrd" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pend" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jurusan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_adm" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_pet" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kategori" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="56" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="60" height="55" uuid="1bd23f73-3bfa-477e-9bab-9670a7aceae2"/>
+				<imageExpression><![CDATA["D:\\Pemrograman\\Project_Java\\mandalahayuFX\\src\\mandalahayufx\\gambar\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="60" y="0" width="291" height="55" uuid="b0c1fd87-947b-487b-b6cb-ab084a1cf773"/>
+				<textElement verticalAlignment="Middle">
+					<font size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bukti pembayaran]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="20" uuid="7e2b8e12-5e10-4267-8826-1258e9d79b83"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Murid : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="0" width="206" height="20" uuid="999ccab2-38a5-4be5-bc01-49b2b409751d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_mrd}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="266" y="0" width="60" height="20" uuid="a67ab889-51b0-418d-ab3b-3df359e95b59"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="326" y="0" width="206" height="20" uuid="1dd3c646-3636-4e5e-a422-7f1c62df541a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="532" y="0" width="60" height="20" uuid="b945f20a-5da5-4c31-9d66-559f80b1b2e6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kelas :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="592" y="0" width="206" height="20" uuid="0acc15d8-8b0f-42f2-9e35-ad9c47bf6aca"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="60" height="20" uuid="105d4853-6aa9-4fe6-91fa-2eb0cb79b70c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenjang :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="20" width="206" height="20" uuid="cf8e7712-fe95-499e-abdb-1e0c13305160"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pend}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="266" y="20" width="60" height="20" uuid="18267837-cf9d-4b66-9346-2ca0b41edffe"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jurusan :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="326" y="20" width="339" height="20" uuid="6e8012ae-ae17-491b-afa1-b54a55a563fe"/>
+				<textFieldExpression><![CDATA[$F{jurusan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="133" height="20" uuid="290f2ed4-8128-4224-8b78-1e6d81734621"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="0" width="133" height="20" uuid="e8fefadf-bffe-460c-b40e-995be635e91e"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Administrasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="0" width="133" height="20" uuid="f844863f-6548-43d2-8cee-4ee26a29f98f"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="0" width="133" height="20" uuid="8a20d6ed-638a-4e76-b935-50f1eb7444df"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="532" y="0" width="133" height="20" uuid="00bf3c2d-0b14-491d-b6f1-d62c4d22e024"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Biaya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="665" y="0" width="133" height="20" uuid="96becdac-bc5f-4715-bbf9-0c06fa8e3aea"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="133" height="20" uuid="5fe3dd50-5e0a-4f00-9855-ab0f2a8f90de"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="0" width="133" height="20" uuid="e7e8f924-5907-4b85-8f3e-91cf6844bdf4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id_adm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="0" width="133" height="20" uuid="fe952f8b-f1e8-4608-8b9a-4214bf3dabb6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id_pet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="0" width="133" height="20" uuid="cf4e441d-a99d-4681-9c76-fa8eb659c49d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="532" y="0" width="133" height="20" uuid="53d2554c-f3ea-427c-9cc0-a34e6a8aa452"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="665" y="0" width="133" height="20" uuid="04eed6a5-5117-4e5a-9d39-69c21ce05597"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="532" y="1" width="266" height="20" uuid="4922a7ba-7203-4db4-ba39-61d0bebcca51"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Yang menyerahkan,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="532" height="20" uuid="1e956ee2-8e0d-48d2-9b1d-c88f18547f44"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Yayasan Mandalahayu]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="97" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="532" y="77" width="266" height="20" uuid="7fb1b8eb-db8f-4fe9-b8db-057f9f98219f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="532" height="97" uuid="745db961-9e82-4f26-b278-3682dd9e3524"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Jalan Perum. Margahayu No. 304-312, Margahayu
+Bekasi Timur, Kota Bekasi, Jawa Barat 17113
+Email : yayasanmandalahayu1987@gmail.com
+Telp : (021) 8808956
+Website : mandalahayu.sch.id]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="1" splitType="Stretch"/>
+	</summary>
+</jasperReport>

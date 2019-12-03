@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.petugas {
+    -fx-background-color: white;
+}
+
+.panelUser{
+    -fx-border-color : #2d3843;
+    -fx-border-width: 5;
+    -fx-border-radius: 10;
+}

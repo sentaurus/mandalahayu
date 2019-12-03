@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="655.0" prefWidth="882.0" styleClass="home" stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mandalahayu.kontroller.homeController">
+   <children>
+      <AnchorPane fx:id="pane2" minHeight="620.0" minWidth="1000.0" prefHeight="590.0" prefWidth="667.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="92.0" />
+      <HBox layoutY="2.0" prefWidth="531.0" styleClass="hbox" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox prefWidth="476.0">
+               <children>
+                  <Label text="Yayasan Mandalahayu" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <MenuBar fx:id="menubar">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="Rumah">
+                           <items>
+                              <MenuItem fx:id="dash" mnemonicParsing="false" onAction="#onDash" text="Dashboard">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/dash.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#onExit" text="Keluar">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/keluar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../gambar/rumah.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Menu">
+                          <items>
+                              <MenuItem fx:id="pendidik" mnemonicParsing="false" onAction="#onPendidik" text="Pendidikan">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/pendidikan.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="murid" mnemonicParsing="false" onAction="#onMurid" text="Murid">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/murid.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="admin" mnemonicParsing="false" onAction="#onAdmin" text="Administrasi">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/administrasi.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="bayar" mnemonicParsing="false" onAction="#onBayar" text="Pembayaran">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/pembayaran.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                          </items>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../gambar/menu.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Petugas">
+                           <items>
+                              <MenuItem fx:id="petugas" mnemonicParsing="false" onAction="#onPetugas" text="Perubahan Data">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/data.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="lapPetugas" mnemonicParsing="false" onAction="#onLappetugas" text="Laporan">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/dataLap.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../gambar/petugas.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Laporan">
+                          <items>
+                              <MenuItem fx:id="lapPendidik" mnemonicParsing="false" onAction="#onLappendidik" text="Pendidikan">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/pendidikan.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="lapMurid" mnemonicParsing="false" onAction="#onLapmurid" text="Murid">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/murid.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="lapAdmin" mnemonicParsing="false" onAction="#onLapadmin" text="Administrasi">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/administrasi.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="lapBayar" mnemonicParsing="false" onAction="#onLapbayar" text="Pembayaran">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gambar/pembayaran.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                          </items>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../gambar/laporan.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Menu>
+                     </menus>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </MenuBar>
+               </children>
+            </VBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="88.0" prefWidth="458.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="user" alignment="CENTER" minHeight="25.0" prefHeight="25.0" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fx:id="kecil" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/kecil.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="tutup" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/tutup.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="login" layoutX="15.0" layoutY="37.0" minHeight="620.0" minWidth="1000.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="92.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="155.0" layoutY="14.0">
+               <children>
+                  <Label text="Selamat datang di,">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <Label text="Sistem Informasi Manajemen Administrasi Murid">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="336.0" layoutY="159.0" prefHeight="302.0" prefWidth="329.0">
+               <children>
+                  <Label text="Silahkan Login">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="untuk menggunakan aplikasi">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/user.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <TextField fx:id="nip" promptText="NIP">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <PasswordField fx:id="sandi" promptText="Kata Sandi">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="masuk" minWidth="100.0" mnemonicParsing="false" onAction="#onMasuk" text="Masuk">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="batal" minWidth="100.0" mnemonicParsing="false" onAction="#onBatal" text="Batal">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_LEFT" layoutX="824.0" layoutY="592.0" prefHeight="29.0">
+               <padding>
+                  <Insets bottom="2.0" top="2.0" />
+               </padding>
+            </HBox>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

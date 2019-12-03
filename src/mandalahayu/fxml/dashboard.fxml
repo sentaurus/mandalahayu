@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="620.0" minWidth="1000.0" styleClass="dashboard" stylesheets="@../css/dashboard.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mandalahayu.kontroller.dashboardController">
+   <children>
+      <PieChart fx:id="piechart" title="Data Murid per Jenjang" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="420.0" prefHeight="195.0" prefWidth="249.0" styleClass="ket1" AnchorPane.topAnchor="420.0">
+         <children>
+            <Label text="Pencarian data pembayaran yang masuk" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cari" promptText="Cari data pembayaran yang masuk">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="289.0" layoutY="400.0" prefHeight="215.0" prefWidth="697.0" AnchorPane.bottomAnchor="5.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="698.0" text="Data Pembayaran yang masuk">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tabel" prefHeight="196.0" prefWidth="687.0">
+              <columns>
+                <TableColumn fx:id="no" prefWidth="75.0" text="Nomor" />
+                <TableColumn fx:id="pend" prefWidth="75.0" text="Pendidikan" />
+                  <TableColumn fx:id="id_mrd" prefWidth="75.0" text="ID Murid" />
+                  <TableColumn fx:id="nama" prefWidth="75.0" text="Nama" />
+                  <TableColumn fx:id="id_adm" prefWidth="75.0" text="Administrasi" />
+                  <TableColumn fx:id="kat" prefWidth="75.0" text="Kategori" />
+                  <TableColumn fx:id="harga" prefWidth="75.0" text="Rupiah" />
+                  <TableColumn fx:id="tgl" prefWidth="75.0" text="Tanggal" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+      <AreaChart fx:id="areachart" layoutX="500.0" title="Data Murid per 10 Tahun">
+        <xAxis>
+          <CategoryAxis label="Tahun" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Data" side="LEFT" />
+        </yAxis>
+      </AreaChart>
+   </children>
+</AnchorPane>

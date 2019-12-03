@@ -1,0 +1,38 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.home {
+    -fx-border-width : 5;
+    -fx-border-color : #2d3843;
+    -fx-background-color: white;
+}
+
+.hbox{
+    -fx-background-color: #2d3843;
+}
+
+.pane-view{
+    -fx-background-color: red;
+}
+.menu-bar{
+    -fx-background-color: null;
+}
+
+.menu-bar .label {
+    -fx-font-weight: bold; 
+    -fx-text-fill : white;
+}
+
+.menu-item{
+    -fx-background-color: #2d3843;
+    
+}
+
+.menu-item:hover{
+    -fx-background-color : -fx-accent;
+}
+
+.menu-item:selected {
+    -fx-background-color : -fx-accent;    
+}

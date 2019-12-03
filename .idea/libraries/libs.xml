@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$" />
+      <root url="file://$PROJECT_DIR$/../../Library java/ireport/libs" />
+      <root url="file://$PROJECT_DIR$/../../Library java/ireport/modules/ext" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+      <root url="file://$PROJECT_DIR$/../../Library java/ireport/modules/ext" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../Library java/ireport/libs" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../Library java/ireport/modules/ext" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../Library java/ireport/modules/ext" recursive="false" type="SOURCES" />
+  </library>
+</component>

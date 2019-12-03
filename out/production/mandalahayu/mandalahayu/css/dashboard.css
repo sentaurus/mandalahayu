@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.dashboard {
+    -fx-background-color: white;
+}
+
+.ket1{
+    -fx-border-width  : 5;
+    -fx-border-color: #cc3f3f;
+    -fx-border-radius: 10; 
+}
+
+.ket2, .ket3 {
+    -fx-border-width  : 2;
+    -fx-border-color: #3d4954;
+    -fx-border-radius: 10; 
+}
