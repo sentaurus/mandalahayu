@@ -50,7 +50,7 @@
 		<band height="56" splitType="Stretch">
 			<image>
 				<reportElement x="0" y="0" width="60" height="55" uuid="1bd23f73-3bfa-477e-9bab-9670a7aceae2"/>
-				<imageExpression><![CDATA["D:\\Pemrograman\\Project_Java\\mandalahayuFX\\src\\mandalahayufx\\gambar\\logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["D:\\Pemrograman\\Project_Java\\mandalahayu\\src\\mandalahayu\\gambar\\logo.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="60" y="0" width="291" height="55" uuid="b0c1fd87-947b-487b-b6cb-ab084a1cf773"/>

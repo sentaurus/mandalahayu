@@ -55,7 +55,7 @@
 			</staticText>
 			<image>
 				<reportElement x="1" y="0" width="84" height="84" uuid="9d6b370d-f180-4080-8a34-ad9b7731034f"/>
-				<imageExpression><![CDATA["D:\\Pemrograman\\Project_Java\\mandalahayuFX\\src\\mandalahayufx\\gambar\\logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["D:\\Pemrograman\\Project_Java\\mandalahayu\\src\\mandalahayu\\gambar\\logo.png"]]></imageExpression>
 			</image>
 			<line>
 				<reportElement positionType="FixRelativeToBottom" x="1" y="105" width="802" height="1" uuid="7ba25819-1077-4a01-8a00-17182ead556a"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6dca3224-1855-41b5-a5c3-6150e5198c27">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="106"/>
+	<property name="ireport.x" value="41"/>
 	<property name="ireport.y" value="0"/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
@@ -55,7 +55,7 @@
 			</staticText>
 			<image>
 				<reportElement x="1" y="0" width="84" height="84" uuid="9d6b370d-f180-4080-8a34-ad9b7731034f"/>
-				<imageExpression><![CDATA["D:\\Pemrograman\\Project_Java\\mandalahayuFX\\src\\mandalahayufx\\gambar\\logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["D:\\Pemrograman\\Project_Java\\mandalahayu\\src\\mandalahayu\\gambar\\logo.png"]]></imageExpression>
 			</image>
 			<line>
 				<reportElement positionType="FixRelativeToBottom" x="1" y="105" width="802" height="1" uuid="7ba25819-1077-4a01-8a00-17182ead556a"/>

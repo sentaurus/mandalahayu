@@ -68,7 +68,7 @@ public class queryMurid implements interfaceMurid {
     @Override
     public void ubah(murid murid) {
         String SQL = "UPDATE murid SET nama=?,pend=?,kelas=?,jurusan=? WHERE "
-                + "id_mrd=? OR nama=?";
+                + "id_mrd=?";
         try {
             PreparedStatement ps = koneksi.prepareStatement(SQL);
             ps.setString(1, murid.getNama());
@@ -76,7 +76,6 @@ public class queryMurid implements interfaceMurid {
             ps.setString(3, murid.getKelas());
             ps.setString(4, murid.getJurusan());
             ps.setString(5, murid.getId_mrd());
-            ps.setString(6, murid.getNama());
             ps.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(queryMurid.class.getName()).log(Level.SEVERE, null, ex);

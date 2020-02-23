@@ -204,15 +204,16 @@ public class queryDash implements interfaceDash {
         for (int i = 0; i <= 4; i++) {
             String sql = "SELECT "
                     + "SUM(case when pend LIKE 'X%' then "
-                    + "(hrg_spp+hrg_upkl+hrg_dkbm+hrg_skbm) ELSE 0 END) TK,"
+                    + "(hrg_spp+hrg_upkl+hrg_dkbm+hrg_skbm) ELSE 0 END) X,"
                     + "SUM(case when pend LIKE 'XI%' then "
-                    + "(hrg_spp+hrg_upkl+hrg_dkbm+hrg_skbm) ELSE 0 END) SD,"
+                    + "(hrg_spp+hrg_upkl+hrg_dkbm+hrg_skbm) ELSE 0 END) XI,"
                     + "SUM(case when pend LIKE 'XII%' then "
+                    + "(hrg_spp+hrg_upkl+hrg_dkbm+hrg_skbm) ELSE 0 END) XII"
                     + " FROM sekolah";
             try {
                 ResultSet rs = koneksi.prepareStatement(sql).executeQuery();
                 while (rs.next()) {
-                    float persen = rs.getFloat(1) + rs.getFloat(2) + rs.getFloat(3) + rs.getFloat(4) + rs.getFloat(5);
+//                    float persen = rs.getFloat(1) + rs.getFloat(2) + rs.getFloat(3);
                     x.getData().add(new XYChart.Data(rs.getInt(1), rs.getInt(1), rs.getInt(1) / 5));
                     xi.getData().add(new XYChart.Data(rs.getInt(2), rs.getInt(2), rs.getInt(2) / 5));
                     xii.getData().add(new XYChart.Data(rs.getInt(3), rs.getInt(3), rs.getInt(3) / 5));
